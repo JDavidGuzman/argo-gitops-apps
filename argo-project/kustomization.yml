@@ -1,0 +1,7 @@
+resources:
+- project.yml
+- argo-cd
+- argo-events
+- argo-workflows
+- argo-rollouts
+- sealed-secrets

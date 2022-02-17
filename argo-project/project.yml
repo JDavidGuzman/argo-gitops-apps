@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: argo
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  description: ArgoCD, Argo Evenets, Argo Workflow and Argo Rollouts
+  sourceRepos:
+  - https://github.com/argoproj/*
+  destinations:
+  - namespace: argocd
+    server: https://kubernetes.default.svc
+  - namespace: argo-events
+    server: https://kubernetes.default.svc
+  - namespace: argo
+    server: https://kubernetes.default.svc
+  - namespace: argo-rollouts
+    server: https://kubernetes.default.svc
+  - namespace: kube-system
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
