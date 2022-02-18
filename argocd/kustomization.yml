@@ -3,3 +3,5 @@ bases:
 - github.com/argoproj/argo-cd//manifests/cluster-install?ref=v2.1.10
 resources:
 - ns.yml
+patchesStrategicMerge:
+- argo-server-patch.yml
