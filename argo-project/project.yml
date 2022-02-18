@@ -9,6 +9,7 @@ spec:
   description: ArgoCD, Argo Evenets, Argo Workflow and Argo Rollouts
   sourceRepos:
   - https://github.com/argoproj/*
+  -  https://github.com/JDavidGuzman/*
   destinations:
   - namespace: argocd
     server: https://kubernetes.default.svc

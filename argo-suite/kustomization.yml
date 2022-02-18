@@ -1,0 +1,7 @@
+resources:
+- ../argo-events
+- ../argo-workflows
+- ../argo-rollouts
+- ../argo-project
+- ../sealed-secrets
+- ../argocd
